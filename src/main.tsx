@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
+import { RecoilRoot } from 'recoil'
 
 ReactDOM.render(
-  <BrowserRouter>
+<RecoilRoot>
+  {/* <BrowserRouter> */}
     <App />
-  </BrowserRouter>,
+  {/* </BrowserRouter> */}
+  </RecoilRoot>,
   document.getElementById('root')
 )

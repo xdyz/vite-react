@@ -4,9 +4,30 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/ico
 
 const { SubMenu } = Menu;
 
+function compare(v1, v2) {
+
+  const v1List = v1.split('.');
+  const v2List = v2.split('.');
+
+  const arrLen = v1List.length < v2List.length ? v1List.length : v2List.length;
+
+  for (let i = 0; i < arrLen; i++) {
+
+    if(v1List[i] > v2List[i]) {
+     return 1
+    } 
+
+    if(v1List[i] < v2List[i]) {
+      return -1
+    }
+  }
+
+  return 0
+}
+
+
 // submenu keys of first level
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
-
 const Sider = () => {
   const [openKeys, setOpenKeys] = useState(['sub1']);
 
